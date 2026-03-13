@@ -2,11 +2,11 @@ package FileIO;
 
 import java.io.FileInputStream;
 
-public class FileInputStream1 {
+public class FileInputStreamDemo {
 
 	public static void main(String[] args) {
 		try {
-			FileInputStream input = new FileInputStream("input.txt");
+			FileInputStream input = new FileInputStream("Input.txt");
 			System.out.println("Data in te file:");
 			int i = input.read();
 			while(i!=-1) {
