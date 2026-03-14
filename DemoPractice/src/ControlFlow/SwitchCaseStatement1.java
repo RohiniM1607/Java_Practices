@@ -1,6 +1,6 @@
 package ControlFlow;
 
-public class SwitchCaseStatement {
+public class SwitchCaseStatement1 {
 
 	public static void main(String[] args) {
 		int letter='A';
