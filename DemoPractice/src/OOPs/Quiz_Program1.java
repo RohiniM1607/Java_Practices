@@ -1,17 +1,17 @@
 package OOPs;
 
-class Base{
+class QBase1{
 	int i;
-	Base(){
+	QBase1(){
 		System.out.println("Hello");
 	}
 	void display() {
 		System.out.println(i);
 	}
 }
-class Derived extends Base{
+class QDerived1 extends QBase1{
 	int j;
-	Derived(){
+	QDerived1(){
 		super();
 	}
 	void display() {
@@ -23,7 +23,7 @@ class Derived extends Base{
 public class Quiz_Program1 {
 
 	public static void main(String[] args) {
-		Derived obj = new Derived();
+		QDerived1 obj = new QDerived1();
 		obj.i = 5;
 		obj.display();
 		obj.j = 10;

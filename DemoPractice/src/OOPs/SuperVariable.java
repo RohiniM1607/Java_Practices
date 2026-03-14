@@ -20,7 +20,7 @@ class Programmer extends ProjectLeader{
 	}
 }
 
-public class SuperVariableDemo {
+public class SuperVariable {
 
 	public static void main(String[] args) {
 		Programmer obj = new Programmer();

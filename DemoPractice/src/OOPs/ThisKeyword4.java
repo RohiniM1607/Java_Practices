@@ -52,7 +52,7 @@ class HRDepartment{
 		
 	}
 }
-public class ThisDemoMain {
+public class ThisKeyword4 {
 
 	public static void main(String[] args) {
 		//Calls default constructor - internally calls parameterized constructor

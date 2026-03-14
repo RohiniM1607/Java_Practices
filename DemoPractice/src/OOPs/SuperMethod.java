@@ -23,7 +23,7 @@ class Programmer1 extends ProjectLeader1{
 	}
 }
 
-public class SuperMethodDemo {
+public class SuperMethod {
 
 	public static void main(String[] args) {
 		Programmer1 obj = new Programmer1();

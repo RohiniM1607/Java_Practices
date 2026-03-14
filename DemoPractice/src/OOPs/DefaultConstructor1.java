@@ -1,5 +1,5 @@
 package OOPs;
-class DefaultConstructor1{
+class DConstructor1{
 	int empId;
 	String empName;
 	void getEmployeeDetails () {
@@ -8,10 +8,10 @@ class DefaultConstructor1{
 	}
 }
 
-public class DefaultConstructor1Main {
+public class DefaultConstructor1 {
 
 	public static void main(String[] args) {
-		DefaultConstructor1 con= new DefaultConstructor1();
+		DConstructor1 con= new DConstructor1();
 		con.getEmployeeDetails();
 	}
 

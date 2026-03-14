@@ -1,9 +1,9 @@
 package OOPs;
 
-class ParameterizedConstructor2{
+class PConstructor2{
 	String theatreID;
 	String theatreName;
-	ParameterizedConstructor2(String tid, String tname){
+	PConstructor2(String tid, String tname){
 		theatreID = tid;
 		theatreName = tname;
 	}
@@ -14,10 +14,10 @@ class ParameterizedConstructor2{
 		System.out.println("--------------------------");
 	} 
 }
-public class ParameterizedConstructor2Main {
+public class ParameterizedConstructor2 {
 
 	public static void main(String[] args) {
-		ParameterizedConstructor2 con = new ParameterizedConstructor2("T4742","SPI Cinemas");
+		PConstructor2 con = new PConstructor2("T4742","SPI Cinemas");
 		con.getTheatreDetails(); 
 	}
 
