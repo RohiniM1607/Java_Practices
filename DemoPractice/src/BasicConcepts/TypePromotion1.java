@@ -1,6 +1,6 @@
 package BasicConcepts;
 
-public class TypePromotion {
+public class TypePromotion1 {
 
 	public static void main(String[] args) {
 		byte b = 50;
