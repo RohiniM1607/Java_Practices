@@ -6,23 +6,26 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class JdbcCreateTable {
+	
+	static String url = "jdbc:mysql://localhost:3306/TestDB";
+    static String user = "root";
+    static String pass = "Rohini_16";
 
-	public static void main(String[] args) {
-		String dbURL = "jdbc:mysql://localhost:3306/TestDB";
-		String username = "root";
-		String password = "Rohini_16";
-		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
-			String sql = "CREATE TABLE Student " + "(ID INT NOT NULL, " +
-				"Name VARCHAR(255), " + "Course VARCHAR(255), " +
-				"Email VARCHAR(255), " + "PRIMARY KEY (ID))";
-			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.executeUpdate();
-			System.out.println("Table created successfully using PreparedStatement!");
-		} 
-		catch (SQLException ex) {
-			ex.printStackTrace();
-		}
+	public static void createTable() {
+        try (Connection conn = DriverManager.getConnection(url, user, pass)) {
 
-	}
+            String sql = "CREATE TABLE IF NOT EXISTS Student (" +
+                    "ID INT PRIMARY KEY, Name VARCHAR(255), " +
+                    "Course VARCHAR(255), Email VARCHAR(255))";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.executeUpdate();
+
+            System.out.println("Table created!");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

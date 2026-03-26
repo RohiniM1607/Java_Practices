@@ -4,29 +4,35 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class JdbcDelete {
 
-	public static void main(String[] args) {
-		String dbURL = "jdbc:mysql://localhost:3306/TestDB";
-		String username = "root";
-		String password = "Rohini_16";
-		try (Connection conn = DriverManager.getConnection(dbURL, username, password)) {
-			String sql = "DELETE FROM Student WHERE Name = ?";
-			PreparedStatement statement = conn.prepareStatement(sql);
-			statement.setString(1, "Bibin");
-			int rowsDeleted = statement.executeUpdate();
-			if (rowsDeleted > 0) {
-				System.out.println("Student record deleted successfully!");
-			} 
-			else {
-				System.out.println("No matching student found!");
-			}
-		} 
-		catch (SQLException ex) {
-			ex.printStackTrace();
-		}
+	static String url = "jdbc:mysql://localhost:3306/TestDB";
+    static String user = "root";
+    static String pass = "Rohini_16";
 
-	}
+    public static void delete(Scanner sc) {
+        try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+
+            System.out.print("Enter Name to delete: ");
+            String name = sc.nextLine();
+
+            String sql = "DELETE FROM Student WHERE Name=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ps.setString(1, name);
+
+            int rows = ps.executeUpdate();
+
+            if (rows > 0)
+                System.out.println("Deleted!");
+            else
+                System.out.println("Not found!");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
