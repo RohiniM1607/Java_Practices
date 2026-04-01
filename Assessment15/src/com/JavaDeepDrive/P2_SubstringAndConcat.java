@@ -16,9 +16,11 @@ public class P2_SubstringAndConcat {
 		String str = sc.nextLine();
 		if (str.length() >= 2) {
             System.out.println(str.substring(0, 2));
-        } else if (str.length() == 1) {
+        } 
+		else if (str.length() == 1) {
             System.out.println(str + "@");
-        } else {
+        } 
+		else {
             System.out.println("@@");
         }
 
